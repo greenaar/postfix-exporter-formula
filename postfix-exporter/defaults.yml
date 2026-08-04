@@ -1,0 +1,9 @@
+postfix-exporter:
+  enabled: true
+  package: prometheus-postfix-exporter
+  service: prometheus-postfix-exporter
+  listen_address: 127.0.0.1:9154
+  options:
+    - --no-log.unsupported
+    - --postfix.logfile_path=/var/log/mail.log
+    - --web.telemetry-path=/metrics

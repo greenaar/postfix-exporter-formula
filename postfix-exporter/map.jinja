@@ -1,0 +1,5 @@
+# -*- coding: utf-8 -*-
+# vim: ft=jinja
+
+{%- import_yaml 'postfix-exporter/defaults.yml' as defaults %}
+{%- set config = salt['pillar.get']('postfix-exporter', default=defaults['postfix-exporter'], merge=True) %}

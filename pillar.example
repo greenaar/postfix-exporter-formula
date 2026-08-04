@@ -1,0 +1,8 @@
+---
+postfix-exporter:
+  enabled: true
+  options:
+    - --no-log.unsupported
+    - --postfix.logfile_path=/var/log/mail.log
+    - --web.listen-address=127.0.0.1:9154
+    - --web.telemetry-path=/metrics
